@@ -2,6 +2,7 @@ def connected_components_count(graph):
   count = 0
   visited = set()
   for node in graph:
+    print(node)
     if explore(graph,node,visited) == True:
       count +=1
   return count
