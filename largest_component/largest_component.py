@@ -1,3 +1,4 @@
+
 def largest_component(graph):
   largest = 0
   visited = set()
