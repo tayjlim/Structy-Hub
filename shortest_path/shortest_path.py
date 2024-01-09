@@ -19,12 +19,7 @@ def shortest_path(edges, node_A, node_B):
         visited.add(neighbor)
         queue.append((neighbor,steps+1))
   return -1
-    
-    
 ​
-    
-  
-  
 def makeGraph(edges):
   graph= {}
   for edge in edges:
@@ -34,3 +29,13 @@ def makeGraph(edges):
     if b not in graph:
       graph[b] = []
 ​
+    graph[a].append(b)
+    graph[b].append(a)
+  return graph
+​
+"""
+step 1. make a graph
+      2. implement a queue because if we use BFS we are doing a level order traversal
+      3. (node, steps) increment each step and append to the queue 
+      4. We pop the node compare, repeat
+"""
